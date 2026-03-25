@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sri Shiva Sai Chicken Center</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #ffffff;
+      color: #333;
+    }
+    header {
+      background-color: #f5f5f5;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1 {
+      margin: 0;
+    }
+    .container {
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 15px;
+    }
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .price {
+      font-size: 20px;
+      color: green;
+      margin: 10px 0;
+    }
+    .admin {
+      margin-top: 30px;
+      text-align: center;
+    }
+    input {
+      padding: 8px;
+      margin: 5px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #f5f5f5;
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Sri Shiva Sai Chicken Center</h1>
+  <p>Fresh Chicken Delivered to Your Door</p>
+</header>
+
+<div class="container">
+  <div class="card">
+    <img src="https://i.imgur.com/2nCt3Sbl.jpg" alt="Skin Chicken">
+    <h2>Skin Chicken</h2>
+    <p class="price" id="skinPrice">₹320/kg</p>
+  </div>
+
+  <div class="card">
+    <img src="https://i.imgur.com/8zQZ6Yil.jpg" alt="Skinless Chicken">
+    <h2>Skinless Chicken</h2>
+    <p class="price" id="skinlessPrice">₹350/kg</p>
+  </div>
+</div>
+
+<div class="admin">
+  <h3>Update Prices (Owner Only)</h3>
+  <input type="number" id="newSkin" placeholder="Skin Chicken Price">
+  <input type="number" id="newSkinless" placeholder="Skinless Chicken Price">
+  <br>
+  <button onclick="updatePrices()">Update Prices</button>
+</div>
+
+<footer>
+  <p>Owner: Sathish</p>
+  <p>Phone: 8686228849</p>
+</footer>
+
+<script>
+  function updatePrices() {
+    let skin = document.getElementById('newSkin').value;
+    let skinless = document.getElementById('newSkinless').value;
+
+    if (skin) {
+      document.getElementById('skinPrice').innerText = '₹' + skin + '/kg';
+    }
+    if (skinless) {
+      document.getElementById('skinlessPrice').innerText = '₹' + skinless + '/kg';
+    }
+
+    alert('Prices Updated Successfully!');
+  }
+</script>
+
+</body>
+</html>
